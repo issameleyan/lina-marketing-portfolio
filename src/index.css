@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+@layer base {
+  :root {
+    /* #fff2ef is HSL 12 100% 97% */
+    --background: 30 25% 91%;
+    --foreground: 0 0% 10%;
+    
+    --card: 12 100% 98%;
+    --card-foreground: 0 0% 10%;
+    
+    --popover: 12 100% 98%;
+    --popover-foreground: 0 0% 10%;
+    
+    --primary: 12 100% 94%;
+    --primary-foreground: 0 0% 10%;
+    
+    --secondary: 12 20% 88%;
+    --secondary-foreground: 0 0% 10%;
+    
+    --muted: 12 20% 88%;
+    --muted-foreground: 12 10% 40%;
+    
+    --accent: 12 50% 88%;
+    --accent-foreground: 0 0% 10%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 12 30% 88%;
+    --input: 12 30% 88%;
+    --ring: 12 100% 85%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 333 30% 10%;
+    --foreground: 333 20% 90%;
+    --card: 333 30% 12%;
+    --card-foreground: 333 20% 90%;
+    --popover: 333 30% 12%;
+    --popover-foreground: 333 20% 90%;
+    --primary: 333 100% 83%; /* #ffabd0 */
+    --primary-foreground: 333 60% 20%;
+    --secondary: 333 20% 20%;
+    --secondary-foreground: 333 20% 90%;
+    --muted: 333 20% 20%;
+    --muted-foreground: 333 10% 60%;
+    --accent: 333 100% 83%;
+    --accent-foreground: 333 60% 20%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 333 20% 25%;
+    --input: 333 20% 25%;
+    --ring: 333 100% 83%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
