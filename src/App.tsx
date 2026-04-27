@@ -183,13 +183,13 @@ function App() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
-        className="pt-0 pb-32 px-6 relative overflow-hidden"
+        className="pt-32 md:pt-0 pb-32 px-6 relative overflow-hidden"
       >
         <div className="max-w-7xl mx-auto">
            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 text-right mb-24">
              {/* Text Side (Right in RTL) */}
              <div className="lg:w-1/2 order-1 lg:order-1">
-                <h2 className="text-4xl md:text-7xl font-black mb-10 leading-[1.25] text-zinc-900 tracking-tighter">
+                <h2 className="text-3xl md:text-7xl font-black mb-10 leading-[1.25] text-zinc-900 tracking-tighter">
                   أعمل مع المشاريع التي تستحق أن <span className="text-[#d5a294]">تُرى بوضوح</span>
                 </h2>
                 
@@ -199,7 +199,7 @@ function App() {
              </div>
 
              {/* Image Side (Left in RTL) */}
-             <div className="lg:w-1/2 order-2 lg:order-2 relative flex justify-center lg:justify-start">
+             <div className="lg:w-1/2 order-2 lg:order-2 relative flex justify-center lg:justify-start mt-12 lg:mt-0">
                 {/* Decorative circles behind image */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full -z-10 pointer-events-none">
                   <div className="absolute -top-16 -right-16 w-96 h-96 border border-[#d5a294]/20 rounded-full" />
@@ -378,11 +378,11 @@ function App() {
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto text-center pb-32 px-6 bg-background relative z-30"
         >
-           <div className="p-16 md:p-24 rounded-[4rem] bg-[#d5a294] text-zinc-950 relative overflow-hidden shadow-2xl shadow-[#d5a294]/20">
+           <div className="p-10 md:p-24 rounded-[3rem] md:rounded-[4rem] bg-[#d5a294] text-zinc-950 relative overflow-hidden shadow-2xl shadow-[#d5a294]/20">
               {/* Subtle decorative background gradient */}
               <div className="absolute top-0 left-0 w-full h-full bg-linear-to-br from-white/30 to-transparent pointer-events-none" />
               
-              <h3 className="text-4xl md:text-7xl font-black mb-10 leading-tight text-zinc-900">
+              <h3 className="text-3xl md:text-7xl font-black mb-10 leading-tight text-zinc-900">
                 من الفكرة إلى <span className="text-white">الظهور</span>، <br />
                 ومن الظهور إلى <span className="text-white">النمو</span>.
               </h3>
@@ -392,7 +392,7 @@ function App() {
               </p>
               
               <div className="relative z-10">
-                <LiquidButton variant="secondary" size="xxl" onClick={() => scrollTo('contact')} className="mx-auto px-20 scale-110 hover:scale-125 transition-transform duration-500 bg-white text-[#d5a294] border-none shadow-xl shadow-black/10">
+                <LiquidButton variant="secondary" size="xxl" onClick={() => scrollTo('contact')} className="mx-auto px-8 md:px-20 lg:scale-110 lg:hover:scale-125 transition-transform duration-500 bg-white text-[#d5a294] border-none shadow-xl shadow-black/10">
                   أطلب خدمات تسويق متكاملة
                 </LiquidButton>
               </div>
@@ -471,8 +471,7 @@ function App() {
             </div>
             
             <h2 className="text-5xl md:text-7xl font-black leading-[1.1] text-zinc-900">
-              ماذا يقول <br />
-              عملاؤنا <span className="text-[#d5a294]">عنا؟</span>
+              ماذا يقول عملاؤنا <span className="text-[#d5a294]">عنا؟</span>
             </h2>
             
             <p className="text-zinc-500 text-lg md:text-xl leading-relaxed font-medium">

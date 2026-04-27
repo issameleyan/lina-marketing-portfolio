@@ -65,7 +65,7 @@ export function FeatureCarousel({ features }: FeatureCarouselProps) {
           <div className="absolute inset-x-0 top-0 h-12 md:h-20 lg:h-16 bg-gradient-to-b from-primary via-primary/80 to-transparent z-40" />
           <div className="absolute inset-x-0 bottom-0 h-12 md:h-20 lg:h-16 bg-gradient-to-t from-primary via-primary/80 to-transparent z-40" />
           <div className="relative w-full h-full flex items-center justify-center lg:justify-start z-20">
-            <div className="w-full max-w-md space-y-3 py-10">
+            <div className="w-full max-w-lg grid grid-cols-2 lg:flex lg:flex-col gap-3 md:gap-4 lg:gap-0 lg:space-y-3 py-6 lg:py-4">
             {features.map((feature, index) => {
               const isActive = index === currentIndex;
 
@@ -74,23 +74,23 @@ export function FeatureCarousel({ features }: FeatureCarouselProps) {
                   key={feature.id}
                   animate={{ opacity: isActive ? 1 : 0.75, scale: isActive ? 1 : 0.985 }}
                   transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="flex items-center justify-start"
+                  className="flex items-center justify-center lg:justify-start"
                 >
                   <button
                     onClick={() => handleChipClick(index)}
                     onMouseEnter={() => setIsPaused(true)}
                     onMouseLeave={() => setIsPaused(false)}
                     className={cn(
-                      "relative flex items-center gap-4 px-6 md:px-10 lg:px-8 py-4 md:py-6 lg:py-5 rounded-full transition-all duration-700 text-left group border",
+                      "relative flex flex-col lg:flex-row items-center gap-2 lg:gap-4 px-4 md:px-6 lg:px-8 py-5 md:py-6 lg:py-5 rounded-2xl lg:rounded-full transition-all duration-700 text-center lg:text-left group border w-full h-full lg:h-auto justify-center",
                       isActive
                         ? "bg-background text-primary border-black border-2 z-10 shadow-lg"
                         : "bg-transparent text-background/70 border-background/30 hover:border-background/50 hover:text-background"
                     )}
                   >
                     <div className={cn("flex items-center justify-center transition-colors duration-500", isActive ? "text-primary" : "text-background/60")}>
-                      <feature.icon size={22} strokeWidth={2.5} />
+                      <feature.icon className="size-6 md:size-8 lg:size-[22px]" strokeWidth={2.5} />
                     </div>
-                    <span className="font-bold text-lg md:text-xl tracking-tight whitespace-nowrap">
+                    <span className="font-bold text-xs md:text-sm lg:text-xl tracking-tight leading-none">
                       {feature.label}
                     </span>
                   </button>
